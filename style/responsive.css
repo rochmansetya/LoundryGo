@@ -72,30 +72,30 @@
     }
 
     /* Hero */
-    #tentangkami {
+    #hero {
         grid-template-columns: 1fr;
         height: fit-content;
         gap: 2rem;
     }
 
-    .tentangkami-right {
+    .hero-right {
         order: -1;
     }
 
-    .tentangkami-right img {
+    .hero-right img {
         width: 90%;
     }
 
-    .tentangkami-left {
+    .hero-left {
         text-align: center;
         padding-bottom: 5rem;
     }
 
-    .tentangkami-left .pre-title {
+    .hero-left .pre-title {
         margin: 0 auto;
     }
 
-    .tentangkami-name {
+    .hero-name {
         font-size: 2.3rem;
         margin-bottom: 0.5rem;
     }
@@ -120,4 +120,5 @@
     .pre-title {
         font-size: 0.7rem;
     }
+
 }
