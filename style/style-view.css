@@ -1,0 +1,222 @@
+:root {
+    --primaryTextColor: #232e35; /*Untuk title atau judul */
+    --secondaryTextColor: #656d72; /*Untuk text biasa seperti paragraph*/
+
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #f7f7f7;
+    --thirdBackgroundColor: #f5f3fe;
+
+    --primaryIconColor: #11852a;
+    --primaryIconColorOver: #51e851;
+
+    --sectionPadding: 1rem 0;
+    --itemBorderRadius: 0.7rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    padding-top: 50px; /* Sesuaikan dengan tinggi header */
+}
+
+h1,h2,h3,h4,h5,h6, strong{
+    color: var(--primaryTextColor) ;
+}
+
+p {
+    font-size: 1rem; /*16pixel*/
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--secondaryTextColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white; 
+    z-index: 1000; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px 0; /* Tambahkan padding agar lebih rapi */
+    height: 60px; /* Pastikan header punya tinggi tetap */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ul {
+    list-style: none; /*Untuk menghilangkan list titik*/
+    display: flex;
+    gap: 0.9rem;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+/* Portofolio Section */
+#portofolio {
+    padding: var(--sectionPadding);
+    padding: 2rem 0;
+    scroll-margin-top: 80px;
+}
+
+.portofolio {
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden;
+    /* border: 1px solid var(--borderColor); */
+    background-color: var(--primaryBackgroundColor);
+    text-align: justify;
+}
+
+.portofolios {
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden;
+    border: 1px solid var(--borderColor);
+    background-color: var(--primaryBackgroundColor);
+    text-align: justify;
+}
+
+.portofolio .pre-title {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+.portofolio .section-title {
+    text-align: center;
+}
+
+.portofolio-cover {
+    overflow: hidden; /* Hindari gambar keluar dari batas */
+    position: relative;
+}
+
+.portofolio-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Beri jarak antar card */
+    padding: 0 2rem; /* Jarak kiri & kanan */
+}
+
+.portofolio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out; /* Efek animasi smooth */
+}
+
+/* Zoom In saat hover */
+.portofolio-cover:hover img {
+    transform: scale(1.1); /* Perbesar gambar */
+}
+
+/* Zoom Out saat hover keluar */
+.portofolio-cover img:active {
+    transform: scale(1); /* Kembalikan ke ukuran awal */
+}
+
+.portofolio-info {
+    padding: 2rem 1.5rem;
+}
+
+.portofolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portofolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin: 1.00rem 0;
+}
+
+.portofolio h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+.portofolio-title a svg:hover {
+    fill: var(--primaryIconColor);
+}
+
+.portofolio-title a svg {
+    transition: 0.2s ease-in-out;
+}
+
+.portofolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 10px;
+}
+
+.portofolio-tags div {
+    font-size: 0.9rem;
+    border: 1px solid var(--borderColor);
+    padding: 0.4rem 1rem;
+    color: var(--secondaryTextColor);
+}
+
+/* Footer */
+.footer-icons {
+    padding: 4rem 0;
+    background: var(--secondaryBackgroundColor);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0.5rem;
+}
+
+.footer-icons svg {
+    fill: #3e3f3f;
+}
+
+.footer-icons a:hover svg {
+    fill: #000;
+}
+
+@media screen and (max-width: 844px) { 
+    .SubagioProperty .image-gallery {
+        grid-template-columns: 1fr; /* Ubah jadi 1 kolom saat layar kecil */
+        justify-items: center;
+    }
+}

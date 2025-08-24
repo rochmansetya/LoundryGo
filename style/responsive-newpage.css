@@ -1,0 +1,44 @@
+@media screen and (max-width: 100px) {
+    p {
+        font-size: 0.9rem;
+        line-height: 1.8rem;
+    }
+
+    .grid-3 {
+        gap: 1rem;
+    }
+
+    .skills-right ul li {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    /* Footer Section */
+    footer {
+        padding: 2rem 0;
+    }
+
+    /*Grid*/
+    .Property .images-gallery {
+        grid-template-columns: 1fr; /* Hanya 1 kolom untuk tampilan vertikal */
+    }
+    .image-gallery {
+        grid-template-columns: 1fr; /* Hanya 1 kolom untuk tampilan vertikal */
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /* TItles */
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .images-gallery {
+        grid-template-columns: 1fr; /* Hanya 1 kolom untuk tampilan vertikal */
+    }
+
+    .pre-title {
+        font-size: 0.7rem;
+    }
+}

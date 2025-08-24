@@ -1,0 +1,269 @@
+:root {
+    --primaryTextColor: #232e35; /*Untuk title atau judul */
+    --secondaryTextColor: #656d72; /*Untuk text biasa seperti paragraph*/
+
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #f7f7f7;
+    --thirdBackgroundColor: #f5f3fe;
+
+    --primaryIconColor: #11852a;
+    --primaryIconColorOver: #51e851;
+
+    --sectionPadding: 1rem 0;
+    --itemBorderRadius: 0.7rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    padding-top: 50px; /* Sesuaikan dengan tinggi header */
+}
+
+h1,h2,h3,h4,h5,h6, strong{
+    color: var(--primaryTextColor) ;
+}
+
+p {
+    font-size: 1rem; /*16pixel*/
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--secondaryTextColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white; 
+    z-index: 1000; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px 0; /* Tambahkan padding agar lebih rapi */
+    height: 60px; /* Pastikan header punya tinggi tetap */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ul {
+    list-style: none; /*Untuk menghilangkan list titik*/
+    display: flex;
+    gap: 0.9rem;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+/*Property */
+#Property {
+    background-color: var(--secondaryBackgroundColor);
+    align-items: center;
+    padding: 2rem 0; /* Mengurangi padding atas dan bawah */
+}
+
+.Property {
+    padding: 1rem 2rem;
+    text-align: center;
+    background: var(--primaryBackgroundColor);
+    border-radius: var(--itemBorderRadius);
+}
+
+.Property .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.Property .description {
+    text-align: justify; /* Rata kiri dan kanan */
+    max-width: 1200px;  /* Batasi lebar agar nyaman dibaca */
+    margin: 0 auto;    /* Posisikan di tengah */
+    line-height: 1.6;  /* Tambahkan jarak antar baris */
+}
+
+.Property .images-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Beri jarak antar card */
+    padding: 0 2rem; /* Jarak kiri & kanan */
+    justify-content: center;
+
+}
+
+.Property .images-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom sejajar */
+    gap: 20px;
+    max-width: 1200px; /* Batasi lebar maksimal */
+    margin: 0 auto; /* Agar ada di tengah */
+    padding: 20px;
+}
+
+.Property .images-gallery img {
+    width: 100%; /* Pastikan gambar penuh dalam kolom */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Tambahkan sudut melengkung */
+    transition: transform 0.3s ease-in-out;
+}
+
+.Property .images-gallery img:hover {
+    transform: scale(1.05); /* Efek membesar saat hover */
+}
+
+/*UX DESIGN*/
+#UXDesign {
+    padding: var(--sectionPadding);
+    align-items: center;
+    padding: 2rem 0; /* Mengurangi padding atas dan bawah */
+}
+
+.UXDesign {
+    padding: 1rem 2rem;
+    text-align: left;
+    background: var(--primaryBackgroundColor);
+    border-radius: var(--itemBorderRadius);
+}
+
+.UXDesign .section-title {
+    text-align: center;
+    /* font-size: 2rem; */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.UXDesign .description {
+    text-align: justify; /* Rata kiri dan kanan */
+    max-width: 1200px;  /* Batasi lebar agar nyaman dibaca */
+    margin: 10px;    /* Posisikan di tengah */
+    line-height: 1.6;  /* Tambahkan jarak antar baris */
+}
+
+.UXDesign .image-gallery {
+    display: grid;
+    gap: 20px;
+    max-width: 1200px; /* Batasi lebar maksimal */
+    margin: 0 auto; /* Agar ada di tengah */
+    padding: 20px;
+}
+
+.UXDesign .image-gallery .image-container {
+    overflow: hidden; /* Mencegah gambar keluar dari batas */
+    border-radius: 10px; /* Agar sudut tetap melengkung */
+    position: relative;
+}
+
+.UXDesign .image-gallery img {
+    width: 100%; /* Pastikan gambar penuh dalam kolom */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Tambahkan sudut melengkung */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Efek Zoom In hanya dalam batas */
+.UXDesign .image-gallery .image-container:hover img {
+    transform: scale(1.1); /* Membesarkan gambar dalam batas */
+}
+
+/*UI Design*/
+#UIDesign {
+    background-color: var(--secondaryBackgroundColor);
+    align-items: center;
+    padding: 2rem 0; /* Mengurangi padding atas dan bawah */
+}
+
+.UIDesign {
+    padding: 1rem 2rem;
+    text-align: center;
+    background: var(--primaryBackgroundColor);
+    border-radius: var(--itemBorderRadius);
+}
+
+.UIDesign .image-gallery {
+    display: grid;
+    gap: 20px;
+    max-width: 1200px; /* Batasi lebar maksimal */
+    margin: 0 auto; /* Agar ada di tengah */
+    padding: 20px;
+}
+
+.UIDesign .image-gallery .image-container {
+    overflow: hidden; /* Mencegah gambar keluar dari batas */
+    border-radius: 10px; /* Agar sudut tetap melengkung */
+    position: relative;
+}
+
+.UIDesign .image-gallery img {
+    width: 100%; /* Pastikan gambar penuh dalam kolom */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Tambahkan sudut melengkung */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Efek Zoom In hanya dalam batas */
+.UIDesign .image-gallery .image-container:hover img {
+    transform: scale(1.1); /* Membesarkan gambar dalam batas */
+}
+
+/* Footer */
+.footer-icons {
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0.5rem;
+}
+
+.footer-icons svg {
+    fill: #3e3f3f;
+}
+
+.footer-icons a:hover svg {
+    fill: #000;
+}
+
+@media screen and (max-width: 844px) { 
+    .SubagioProperty .image-gallery {
+        grid-template-columns: 1fr; /* Ubah jadi 1 kolom saat layar kecil */
+        justify-items: center;
+    }
+}
